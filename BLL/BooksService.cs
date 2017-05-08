@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Model;
 using IDAL;
 using IBLL;
+using DAL;
 namespace BLL
 {
     public class BooksService : BaseService<Books>, IBaseService<Books>
@@ -14,8 +15,9 @@ namespace BLL
            public override void SetCurrentDal()
         {
             CurrentDal = this.GetCurrentDbSession.BooksDal;
+            //new BooksDal();
         }
-
+   
   
     }
 }
